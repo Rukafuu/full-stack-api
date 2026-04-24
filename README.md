@@ -30,7 +30,7 @@ API RESTful construída com **Node.js + TypeScript + Prisma ORM + SQLite**, dese
 
 ```bash
 # 1. Clone o repositório
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/Rukafuu/full-stack-api.git
 cd full-stack-api
 
 # 2. Instale as dependências
@@ -59,7 +59,7 @@ O servidor estará disponível em `http://localhost:3000`.
 
 ```bash
 # 1. Clone o repositório
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/Rukafuu/full-stack-api.git
 cd full-stack-api
 
 # 2. Suba o container (build + migrations + start automáticos)
