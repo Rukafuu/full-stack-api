@@ -1,0 +1,16 @@
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: "file:/app/data/dev.db"
+      JWT_SECRET: "chave_secreta_docker_troque_em_producao"
+      PORT: 3000
+    volumes:
+      # Persiste o banco SQLite entre reinicializações do container
+      - sqlite_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  sqlite_data:
