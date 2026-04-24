@@ -23,6 +23,15 @@ API RESTful construída com **Node.js + TypeScript + Prisma ORM + SQLite**, dese
 
 - Node.js 18 ou superior
 - npm
+- Docker e Docker Compose (Opcional, mas recomendado)
+- Postman ou Insomnia (para testar a API com a Collection inclusa)
+
+---
+
+## Testando a API (Collection)
+
+Na raiz do projeto, você encontrará o arquivo `Insomnia_Postman_Collection.json`.
+Basta importá-lo no **Postman** ou **Insomnia** para ter todos os endpoints da API prontos para teste, já configurados com os payloads de exemplo.
 
 ---
 

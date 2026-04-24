@@ -1,0 +1,68 @@
+{
+  "info": {
+    "name": "Full Stack API - Grupo Cred",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Clientes",
+      "item": [
+        {
+          "name": "1. Cadastrar Cliente",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/clientes", "host": ["localhost"], "port": "3000", "path": ["api", "clientes"]},
+            "body": {"mode": "raw", "raw": "{\n  \"cpf\": \"12345678901\",\n  \"rg\": \"1234567\",\n  \"nome\": \"João Silva\",\n  \"idade\": 30,\n  \"email\": \"joao@email.com\",\n  \"login\": \"joao123\",\n  \"senha\": \"senha123\"\n}"}
+          }
+        },
+        {
+          "name": "2. Listar Clientes",
+          "request": {
+            "method": "GET",
+            "url": {"raw": "http://localhost:3000/api/clientes", "host": ["localhost"], "port": "3000", "path": ["api", "clientes"]}
+          }
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "3. Login (Gera Token)",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "url": {"raw": "http://localhost:3000/api/auth/login", "host": ["localhost"], "port": "3000", "path": ["api", "auth", "login"]},
+            "body": {"mode": "raw", "raw": "{\n  \"login\": \"joao123\",\n  \"senha\": \"senha123\"\n}"}
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pedidos",
+      "item": [
+        {
+          "name": "4. Criar Pedido (Requer Auth)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"},
+              {"key": "Authorization", "value": "Bearer COLOQUE_SEU_TOKEN_AQUI"}
+            ],
+            "url": {"raw": "http://localhost:3000/api/pedidos", "host": ["localhost"], "port": "3000", "path": ["api", "pedidos"]},
+            "body": {"mode": "raw", "raw": "{\n  \"descricao\": \"Headset Gamer RGB\"\n}"}
+          }
+        },
+        {
+          "name": "5. Listar Pedidos (Requer Auth)",
+          "request": {
+            "method": "GET",
+            "header": [{"key": "Authorization", "value": "Bearer COLOQUE_SEU_TOKEN_AQUI"}],
+            "url": {"raw": "http://localhost:3000/api/pedidos", "host": ["localhost"], "port": "3000", "path": ["api", "pedidos"]}
+          }
+        }
+      ]
+    }
+  ]
+}
